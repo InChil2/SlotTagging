@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=random&text=Shin-Incheol&animation=fadeIn&fontColor=B5B5B6)
+![header](https://capsule-render.vercel.app/api?type=waving&color=random&text=Slot-Tagging&animation=fadeIn&fontColor=B5B5B6)
 
 #### 팀원 : 이슬(조장), 박민아, 정하림, 오수문, 신인철
 
