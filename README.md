@@ -1,6 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=random&text=Slot-Tagging&animation=fadeIn&fontColor=B5B5B6)
 
-<h5> Using Tech </h5>
+<h5 align='center'> Using Tech </h5>
 
 <p align='center'>
   <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a>&nbsp
