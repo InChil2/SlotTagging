@@ -14,7 +14,6 @@
 
 #### 팀원 : 이슬(조장), 박민아, 정하림, 오수문, 신인철
 
-[![InCheol Shin's github activity graph](https://activity-graph.herokuapp.com/graph?username=InChil2&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=InChil2&theme=vue)
 
 #### 2021.10.18(월) Start
