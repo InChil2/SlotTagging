@@ -14,14 +14,14 @@
 
 #### 팀원
 ##### 이슬
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=seuly1203&theme=vue)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=seuly1203&theme=monokai)
 ##### 박민아
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=parkmina365&theme=vue)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=parkmina365&theme=monokai)
 ##### 정하림
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hharimjung&theme=vue)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hharimjung&theme=monokai)
 ##### 오수문
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sumunoh&theme=vue)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sumunoh&theme=monokai)
 ##### 
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=InChil2&theme=vue)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=InChil2&theme=monokai)
 
 #### 2021.10.18(월) Start
