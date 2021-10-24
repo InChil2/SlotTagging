@@ -21,7 +21,7 @@
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hharimjung&theme=monokai)
 ##### 오수문
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sumunoh&theme=monokai)
-##### 
+##### 신인철
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=InChil2&theme=monokai)
 
 #### 2021.10.18(월) Start
