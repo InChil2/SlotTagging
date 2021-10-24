@@ -12,8 +12,16 @@
 
 
 
-#### 팀원 : 이슬(조장), 박민아, 정하림, 오수문, 신인철
-
+#### 팀원
+##### 이슬
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=seuly1203&theme=vue)
+##### 박민아
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=parkmina365&theme=vue)
+##### 정하림
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hharimjung&theme=vue)
+##### 오수문
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sumunoh&theme=vue)
+##### 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=InChil2&theme=vue)
 
 #### 2021.10.18(월) Start
