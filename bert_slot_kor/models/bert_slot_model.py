@@ -106,22 +106,13 @@ class BertSlotModel:
             slots = [x[1:-1] for x in slots]
             y_slots = np.array([[x for x in y_slots[i][1:(len(slots[i])+1)]]
                                 for i in range(y_slots.shape[0])])
-       
 
-############################################## TODO ####################
         slots_score = [[None]*len(slots[i]) for i in range(y_slots.shape[0])]
-# 지금은 slots_score가 None으로 이루어진 행렬입니다. 아래의 예시를 바탕으로 y_slots를 이용하여 slots_score를 만들어보세요.
-# 예시)
-#           입력 문장: 아이유 노래 재생
-#           토크나이즈 된 문장: ['아이유_ / 노래_ / 재 / 생_']
-#           slots : [['아티스트', 'O', 'O', 'O']]
-#           y_slots : [[[0.00003171 0.00454775 0.9950228  0.00019214 0.00020573]
-#                       [0.00000268 0.9998349  0.00004407 0.00001392 0.00010439]
-#                       [0.00000056 0.9999397  0.00002303 0.00000644 0.00003024]
-#                       [0.00000094 0.99993575 0.00002988 0.00001607 0.00001725]]]
-#           slots_score : [[0.9950228  0.9998349  0.9999397  0.99993575]] -> 각 토큰의 슬롯에 대한 확률
-########################################################################
-        
+        temp = list(slots_to_array.label_encoder.classes_)
+        for i, slot in enumerate(slots):
+            for j, tag in enumerate(slot):
+                slots_score[i][j] = y_slots[i][j][temp.index(tag)]
+
         return slots, slots_score
 
     def save(self, model_path):
@@ -145,7 +136,14 @@ class BertSlotModel:
         return new_model
 
     def visualize_log(self, history_dic, metric_name):
-############################################## TODO ####################
-        print(None)
-# history_dict에 기록된 loss 변화 추이를 이미지로 저장하는 함수 만들기
-########################################################################
+        print("visualizing...")
+        plt.plot(history_dic["loss"])
+        plt.plot(history_dic["val_loss"])
+        plt.ylim([0, 0.001])
+        plt.title("LOSS")
+        plt.xlabel("epoch")
+        plt.ylabel("loss")
+        plt.legend(["train", "validation"])
+        plt.savefig("/content/drive/MyDrive/Slot_tagging_project/data/save_models/loss.png", dpi=300)
+
+        
