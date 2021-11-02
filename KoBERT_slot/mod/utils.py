@@ -7,10 +7,8 @@ def flatten(y):
     return list(chain.from_iterable(y))
 
 class Reader:
-    
     def __init__(self):
         pass
-    
     def read(dataset_folder_path):
         text_arr = []
         tags_arr = []
@@ -28,3 +26,4 @@ class Reader:
 
         assert len(text_arr) == len(tags_arr)
         return text_arr, tags_arr
+    
