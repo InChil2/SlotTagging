@@ -119,3 +119,5 @@ if __name__ == "__main__":
         pickle.dump(tags_to_array, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
     tf.compat.v1.reset_default_graph()
+
+    
