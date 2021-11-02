@@ -44,23 +44,16 @@ if __name__ == "__main__":
 
     while True:
         print('Enter Your Sentence : ')
-
         try :
             input_text = input().strip()
-
         except :
             continue
-
         if input_text in ['quit', '종료', '그만', '멈춰', 'stop']:
             break
-
         else :
             text_arr = bert_to_array.tokenizer.tokenize(input_text)
-
             input_ids, input_mask, segment_ids = bert_to_array.transform([' '.join(text_arr)])
-
             inferred_tags, slot_score = model.predict_slots([input_ids, input_mask, segment_ids], tags_to_array)
-
             print(text_arr)
             print(inferred_tags[0])
             print(slot_score[0])
