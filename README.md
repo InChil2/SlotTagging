@@ -10,10 +10,10 @@
 
     1) 모델을 훈련하기 위해 필요한 seq.in, seq.out이라는 2가지 파일을 만드는 과정  
        - `python prepare_data.py process_file({변환할 data.txt 파일 경로}, {아웃풋 저장 경로}), process_line(문장, 토큰)`
-       - ` '홍길동'을 입력하면 '홍', '길', '동' 으로 분류가 되어 출력이 되므로 좀 더 정확한 분류가 이루어짐`
+       - `'홍길동'을 입력하면 '홍', '길', '동' 으로 분류가 되어 출력이 되므로 좀 더 정확한 분류가 이루어짐`
       
     2) 제작한 seq.in, seq.out을 train, validation, test set이 8:1:1 비율이 되도록 나누기
-       - split_new.py
+       - `split_new.py`
 
 3. Fine-tuing 훈련  
 
