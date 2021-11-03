@@ -98,7 +98,6 @@ if __name__ == "__main__":
         val_text_arr, val_tags_arr = Reader.read(val_data_folder_path)
         v_input_ids, v_input_mask, v_segment_ids = bert_to_array.transform(val_text_arr)
     
-        tags_to_array.fit(val_tags_arr)
         val_tags = tags_to_array.transform(val_tags_arr, v_input_ids)
         
         print("training model ...")
