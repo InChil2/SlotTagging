@@ -39,13 +39,10 @@ if __name__ == "__main__":
     sess = tf.Session(config=config)
     
     
-    
-    #################################### TODO 경로 고치기 ##################
     bert_model_hub_path = "/content/drive/MyDrive/Slot_tagging_project/code/bert-module"
-    ########################################################################
     
     vocab_file = os.path.join(bert_model_hub_path,
-                              "assets/vocab.korean.rawtext.list") # 단어사전 파일 경로 지정하기
+                              "assets/vocab.korean.rawtext.list") 
     bert_to_array = BERTToArray(vocab_file)
     
     # loading models
@@ -60,12 +57,9 @@ if __name__ == "__main__":
         
     model = BertSlotModel.load(load_folder_path, sess)
     
-    #################################### TODO #############################
-    # test set 데이터 불러오기
     print('reading test set')
     test_text_arr, test_tags_arr = Reader.read(data_folder_path)
     test_input_ids, test_input_mask, test_segment_ids = bert_to_array.transform(test_text_arr)
-    ########################################################################
 
     def get_results(input_ids, input_mask, segment_ids, tags_arr, tags_to_array):
         inferred_tags, slots_score = model.predict_slots([input_ids,
@@ -92,7 +86,6 @@ if __name__ == "__main__":
                                           test_segment_ids, test_tags_arr,
                                           tags_to_array)
     
-    # 테스트 결과를 모델 디렉토리의 하위 test_results에 저장해 준다.
     result_path = os.path.join(load_folder_path, "test_results")
     
     if not os.path.isdir(result_path):
