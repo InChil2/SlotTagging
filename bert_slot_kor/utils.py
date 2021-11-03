@@ -21,16 +21,13 @@ class Reader:
         ########################### TODO ###############################
         # seq.in과 seq.out을 읽어들여서 리스트로 만들기
         # (텍스트 파일의 한 라인이 리스트의 한 요소가 되도록)
-        in_ap = text_arr.append
-        out_ap = tags_arr.append
-
         with open(os.path.join(dataset_folder_path,'seq.in'),'r') as f:
           for sentence in f.readlines():
-            in_ap(sentence)
+            text_arr.append(sentence)
 
         with open(os.path.join(dataset_folder_path,'seq.out'),'r') as f:
           for sentence in f.readlines():
-            out_ap(sentence)
+            tags_arr.append(sentence)
         ################################################################
 
         assert len(text_arr) == len(tags_arr)
