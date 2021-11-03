@@ -56,7 +56,7 @@
 5. Inference (임의의 문장을 모델에 넣어보기)  
 
     - `python inference.py -m {훈련된 model이 저장된 디렉토리}`  
-    - 예시: `python inference.py --model saved_model/`   
+    - 예시: `python inference.py -m saved_model/`   
     - "Enter your sentence:"라는 문구가 나오면 모델에 넣어보고 싶은 문장을 넣어 주면 됨  
     - 'quit', '종료', '그만', '멈춰', 'stop'라는 입력을 넣어 주면 종료
   
