@@ -4,11 +4,8 @@ import os
 import pickle
 import argparse
 
-
-# 필요한 모듈 불러오기
 from to_array.bert_to_array import BERTToArray
 from models.bert_slot_model import BertSlotModel
-
 
 import tensorflow as tf
 
@@ -34,17 +31,12 @@ if __name__ == "__main__":
                             device_count = {"CPU": 1})
     sess = tf.compat.v1.Session(config=config)
 
-    # 상황에 따라 경로 수정해서 사용하기
     bert_model_hub_path = "/content/drive/MyDrive/Slot_tagging_project/code/bert-module"
     
-
-
-    # 모델과 기타 필요한 것들 불러오기
     vocab_file = os.path.join(bert_model_hub_path, 'assets/vocab.korean.rawtext.list')
 
     bert_to_array = BERTToArray(vocab_file)
 
-    # 모델 불러오기
     print('Loading Models...')
     if not os.path.exists(load_folder_path):
         print(f'Folder {load_folder_path} not exist')
@@ -69,7 +61,6 @@ if __name__ == "__main__":
             break
 
         else :
-            # 입력한 문장을 모델에 넣어서 결과 출력
             text_arr = bert_to_array.tokenizer.tokenize(input_text)
 
             input_ids, input_mask, segment_ids = bert_to_array.transform([' '.join(text_arr)])
