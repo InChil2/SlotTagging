@@ -56,9 +56,7 @@ if __name__ == "__main__":
                             device_count = {"GPU": 1})
     sess = tf.compat.v1.Session(config=config)
     
-    ############################### TODO 경로 고치기 ###################
     bert_model_hub_path = "/content/drive/MyDrive/Slot_tagging_project/code/bert-module"
-    ####################################################################
     bert_vocab_path = os.path.join(bert_model_hub_path,
                                    "assets/vocab.korean.rawtext.list")
 
@@ -90,12 +88,9 @@ if __name__ == "__main__":
     
     if val_data_folder_path:
 
-    ############################### TODO ###############################
-        # validation data 불러오기
-        # train set과 validation set을 둘 다 넣어서 model.fit 하기
         print("reading validation set")
-
         val_text_arr, val_tags_arr = Reader.read(val_data_folder_path)
+        
         v_input_ids, v_input_mask, v_segment_ids = bert_to_array.transform(val_text_arr)
     
         val_tags = tags_to_array.transform(val_tags_arr, v_input_ids)
@@ -105,7 +100,6 @@ if __name__ == "__main__":
                   train_tags,
                   validation_data=([v_input_ids, v_input_mask, v_segment_ids], val_tags),
                   epochs=epochs, batch_size=batch_size)
-    ####################################################################
 
     else:
         print("training model ...")
@@ -125,3 +119,4 @@ if __name__ == "__main__":
         pickle.dump(tags_to_array, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
     tf.compat.v1.reset_default_graph()
+    
