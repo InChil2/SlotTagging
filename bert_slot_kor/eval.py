@@ -12,26 +12,6 @@ from to_array.bert_to_array import BERTToArray
 from models.bert_slot_model import BertSlotModel
 from utils import flatten
 
-def get_results(input_ids, input_mask, segment_ids, tags_arr, tags_to_array):
-    inferred_tags, slots_score = model.predict_slots([input_ids,
-                                                        input_mask,
-                                                        segment_ids],
-                                                        tags_to_array)
-    gold_tags = [x.split() for x in tags_arr]
-
-    f1_score = metrics.f1_score(flatten(gold_tags), flatten(inferred_tags),
-                                average="micro")
-
-    tag_incorrect = ""
-    for i, sent in enumerate(input_ids):
-        if inferred_tags[i] != gold_tags[i]:
-            tokens = bert_to_array.tokenizer.convert_ids_to_tokens(input_ids[i])
-            tag_incorrect += "sent {}\n".format(tokens)
-            tag_incorrect += ("pred: {}\n".format(inferred_tags[i]))
-            tag_incorrect += ("score: {}\n".format(slots_score[i]))
-            tag_incorrect += ("ansr: {}\n\n".format(gold_tags[i]))
-
-    return f1_score, tag_incorrect
 
 if __name__ == "__main__":
     # Reads command-line parameters
@@ -50,7 +30,7 @@ if __name__ == "__main__":
     data_folder_path = args.data
     
     # this line is to disable gpu
-    os.environ["CUDA_VISIBLE_DEVICES"]="1"
+    os.environ["CUDA_VISIBLE_DEVICES"]="0"
     
     config = tf.ConfigProto(intra_op_parallelism_threads=8, 
                             inter_op_parallelism_threads=0,
@@ -87,6 +67,27 @@ if __name__ == "__main__":
     test_input_ids, test_input_mask, test_segment_ids = bert_to_array.transform(test_text_arr)
     ########################################################################
 
+    def get_results(input_ids, input_mask, segment_ids, tags_arr, tags_to_array):
+        inferred_tags, slots_score = model.predict_slots([input_ids,
+                                                            input_mask,
+                                                            segment_ids],
+                                                            tags_to_array)
+        gold_tags = [x.split() for x in tags_arr]
+
+        f1_score = metrics.f1_score(flatten(gold_tags), flatten(inferred_tags),
+                                    average="micro")
+
+        tag_incorrect = ""
+        for i, sent in enumerate(input_ids):
+            if inferred_tags[i] != gold_tags[i]:
+                tokens = bert_to_array.tokenizer.convert_ids_to_tokens(input_ids[i])
+                tag_incorrect += "sent {}\n".format(tokens)
+                tag_incorrect += ("pred: {}\n".format(inferred_tags[i]))
+                tag_incorrect += ("score: {}\n".format(slots_score[i]))
+                tag_incorrect += ("ansr: {}\n\n".format(gold_tags[i]))
+
+        return f1_score, tag_incorrect
+        
     f1_score, tag_incorrect = get_results(test_input_ids, test_input_mask,
                                           test_segment_ids, test_tags_arr,
                                           tags_to_array)
