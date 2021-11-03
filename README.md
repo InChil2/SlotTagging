@@ -11,7 +11,7 @@
     	-  '홍길동'을 입력하면 '홍', '길', '동' 으로 분류가 되어 출력이 되므로 좀 더 정확한 분류가 이루어짐  
 
     2) 제작한 seq.in, seq.out을 train, validation, test set이 8:1:1 비율이 되도록 나누기
-	- split_new.py
+    	-  split_new.py
 
 3. Fine-tuing 훈련  
     - python train.py -t {train set 디렉토리} -v {validation set 디렉토리} -s {model이 저장될 디렉토리} -e {epoch의 수} -bs {batch size의 수}
