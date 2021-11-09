@@ -1,12 +1,9 @@
 :root {
-    /*======================= TODO =======================*/
-    /* 말풍선 등 요소 색상 변경 (변수 설정) */
     --body-bg:  #020304;
     --msger-bg: #fff;
     --border: 2px solid #ddd;
-    --left-msg-bg: #3d473e;
+    --left-msg-bg: #E7E7E7;
     --right-msg-bg: #556757;
-    /*====================================================*/
   }
   
   html {
@@ -59,7 +56,7 @@
     flex: 1;
     overflow-y: auto;
     padding: 10px;
-    background-image: url('https://i.imgur.com/DEaFa0x.jpeg');
+    background-image: url('https://i.imgur.com/SnHjFZS.png');
     background-size: cover;
   }
   .msger-chat::-webkit-scrollbar {
@@ -139,8 +136,7 @@
     flex: 1;
     background: #ddd;
   }
-  /*======================= TODO =======================*/
-  /* 버튼 색상 변경 */
+
   .msger-send-btn {
     margin-left: 10px;
     background: #53765e;
@@ -149,9 +145,9 @@
     cursor: pointer;
     transition: background 0.23s;
   }
-  /*====================================================*/
+
   .msger-send-btn:hover {
-    background: rgb(0, 0, 0);
+    background: rgb(0, 180, 50);
   }
   
   .msger-chat {
