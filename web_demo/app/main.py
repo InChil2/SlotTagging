@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # main.py
 # 작성 일 : 2021.11.07
-# InCheol Shin
+# InCheol Shin, Mina Park
 # Slot_Tagging_Project(web_demo)
 # 수정 일 : 2021.11.09
 from flask import Flask, render_template, request
@@ -152,23 +152,114 @@ def get_bot_response():
 
 
     empty_slot = [menu[k] for k in app.slot_dict if not app.slot_dict[k]]
-    in_slot = [menu[k] for k in app.slot_dict if app.slot_dict[k]]
 
-    if (in_slot == ['음료', '음료 온도', '음료 사이즈', '음료 수량'] \
-        or in_slot ==  ['음료', '음료 온도', '음료 사이즈', '음료 수량', '시럽', '시럽 수량'] \
-        or in_slot == ['푸드', '푸드 수량'] \
-        or in_slot ==  ['음료', '음료 온도', '음료 사이즈', '음료 수량', '푸드', '푸드 수량','시럽', '시럽 수량'] \
-        or in_slot ==  ['음료', '음료 온도', '음료 사이즈', '음료 수량','푸드', '푸드 수량']):
+    if ('음료' in empty_slot and '푸드' in empty_slot):
+  #음료와 푸드 이름이 인식 안된 상태
+	#재 입력 필요
+        message = '인식 할 문장 없음'
+    elif '푸드' not in empty_slot:
+    #음료 이름이 인식 안된 상태 or 푸드만 주문하는 상태
+        message = '푸드 인식'
+        if '푸드 수량' in empty_slot:
+        # 푸드를 주문하려고 했으나 인식이 안된 상태
+            message = '푸드 인식 수량 없음'
+        else:
+            message = '푸드 인식 주문 완료 가능'
 
-        message = ("감사합니다. 주문이 완료되었습니다! if로 빠짐")
+    elif '음료' not in empty_slot:
+        #푸드 이름이 인식 안된 상태 or 음료만 주문하는 상태
+        message = ' 음료 인식'
+    
+        if '시럽' not in empty_slot:
+            if ('음료 사이즈' in empty_slot and '음료 수량' in empty_slot):
+                message = '사이즈, 수량 없음'
 
-    elif empty_slot :
-        message = (", ".join(empty_slot) + "가 아직 선택되지 않았습니다. elif로 빠짐")
+            # 사이즈만 있을 때
+            elif ('음료 온도' in empty_slot and '음료 수량' in empty_slot):
+                message = '온도, 수량 없음'
 
-    else :
-        message = ('else로 빠지는 문제 발생')
+            # 수량 만 있을 때
+            elif ('음료 온도' in empty_slot and '음료 사이즈' in empty_slot):
+                message = '온도, 사이즈 없음'
+
+            # 온도, 사이즈만 있을 때
+            elif ('음료 수량' in empty_slot):
+                message = '수량 없음'
+
+            # 온도 수량만 있을 때
+            elif ('음료 사이즈' in empty_slot):
+                message = '사이즈 없음'
+
+            # 사이즈, 수량만 있을 때
+            elif ('음료 온도' in empty_slot):
+                message = '온도 없음'
+            
+            elif ('시럽 수량' in empty_slot):
+                message = '시럽 수량 없음'
+
+            else :
+                message = '주문 완료 가능'
+        elif ('시럽' not in empty_slot and '시럽 수량' not in empty_slot):
+            if ('음료 사이즈' in empty_slot and '음료 수량' in empty_slot):
+                message = '사이즈, 수량 없음'
+
+            # 사이즈만 있을 때
+            elif ('음료 온도' in empty_slot and '음료 수량' in empty_slot):
+                message = '온도, 수량 없음'
+
+            # 수량 만 있을 때
+            elif ('음료 온도' in empty_slot and '음료 사이즈' in empty_slot):
+                message = '온도, 사이즈 없음'
+
+            # 온도, 사이즈만 있을 때
+            elif ('음료 수량' in empty_slot):
+                message = '수량 없음'
+
+            # 온도 수량만 있을 때
+            elif ('음료 사이즈' in empty_slot):
+                message = '사이즈 없음'
+
+            # 사이즈, 수량만 있을 때
+            elif ('음료 온도' in empty_slot):
+                message = '온도 없음'
+
+            else :
+                message = '주문 완료 가능'
+    
+        else:
+            # 온도만 있을 때
+            if ('음료 사이즈' in empty_slot and '음료 수량' in empty_slot):
+                message = '사이즈, 수량 없음'
+
+            # 사이즈만 있을 때
+            elif ('음료 온도' in empty_slot and '음료 수량' in empty_slot):
+                message = '온도, 수량 없음'
+
+            # 수량 만 있을 때
+            elif ('음료 온도' in empty_slot and '음료 사이즈' in empty_slot):
+                message = '온도, 사이즈 없음'
+
+            # 온도, 사이즈만 있을 때
+            elif ('음료 수량' in empty_slot):
+                message = '수량 없음'
+
+            # 온도 수량만 있을 때
+            elif ('음료 사이즈' in empty_slot):
+                message = '사이즈 없음'
+
+            # 사이즈, 수량만 있을 때
+            elif ('음료 온도' in empty_slot):
+                message = '온도 없음'
+
+            else :
+                message = '주문 완료 가능'
+
+    elif ('음료' not in empty_slot and '푸드' not in empty_slot):
+            #  음료 푸드 둘 다 인식이 된 상태
+            message = ' 음료, 푸드 둘 다 인식'     
 
     return message
+
 
 def check_order_msg(app, menu):
     order = []
@@ -216,9 +307,7 @@ def catch_slot(i, inferred_tags, text_arr, slot_text):
         if word_piece == 'ᆫ':
             word = slot_text[inferred_tags[0][i]]
             slot_text[inferred_tags[0][i]] = word[:-1]+chr(ord(word[-1])+4)
-        else:
-            if word_piece == "오" and inferred_tags[0][i] == "vegetable":
-                slot_text[inferred_tags[0][i]] += "오이"
-            else:
-                slot_text[inferred_tags[0][i]] += word_piece
-                
+        else:    
+            slot_text[inferred_tags[0][i]] += word_piece
+        
+              
