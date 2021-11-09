@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 # main.py
-# 작성 일 : 2021.11.07
+# 작성일 : 2021.11.07
+# 수정일 : 2021.11.09
 # InCheol Shin, Mina Park
 # Slot_Tagging_Project(web_demo)
-# 수정 일 : 2021.11.09
+
 from flask import Flask, render_template, request
 from flask_ngrok import run_with_ngrok
 import tensorflow as tf
@@ -97,10 +98,9 @@ def home():
 
     app.score_limit = 0.7
 
-    #변수 만들기
-
     return render_template("index.html")
     
+
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg').strip() # 사용자가 입력한 문장
@@ -295,12 +295,6 @@ def init_app(app):
         'food_quantity':[]
         }
 
-    # app.ask_temperature = False
-    # app.ask_size = False
-    # app.ask_quantity = False
-    # app.ask_syrup_quantity = False
-    # app.ask_food_quantity = False
-
 def catch_slot(i, inferred_tags, text_arr, slot_text):
     if not inferred_tags[0][i] == "O":
         word_piece = re.sub("_", " ", text_arr[i])
@@ -309,5 +303,4 @@ def catch_slot(i, inferred_tags, text_arr, slot_text):
             slot_text[inferred_tags[0][i]] = word[:-1]+chr(ord(word[-1])+4)
         else:    
             slot_text[inferred_tags[0][i]] += word_piece
-        
-              
+          
