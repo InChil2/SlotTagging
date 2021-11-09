@@ -3,9 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- ================= TODO : 페이지 제목 설정하기 =================== -->
-  <title>STARBUCKS ChatOrder </title>
-  <!-- ============================================================ -->
+  <title> STARBUCKS Chat Order </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,34 +13,27 @@
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
   <section class="msger">
     <header class="msger-header">
-      <!-- ================= TODO : 챗봇 제목 설정하기 =================== -->
       <div class="msger-header-title">
-        </i> STAR BUCKS PARTNERS </i>
-      <!-- ============================================================ -->
+        </i> STARBUCKS CHAT ORDER </i>
       </div>
     </header>
 
     <main class="msger-chat">
       <div class="msg left-msg">
-        <!-- ================= TODO : 챗봇의 프로필 사진 넣기 =================== -->
         <div class="msg-img" style="background-image: url(https://t1.daumcdn.net/cfile/tistory/99857F4F5E738F472F)"></div>
-        <!-- ================================================================ -->
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name">스벅씨</div>
+            <div class="msg-info-name">스타벅스 파트너</div>
             <div class="msg-info-time"></div>
           </div>
-          <!-- ================= TODO : 챗봇의 첫 인사 넣기 =================== -->
           <div class="msg-text">
             안녕하세요 스타벅스 주문 챗봇입니다.
           </div>
           <div class="msg-text">
             원하시는 메뉴를 말씀해주세요.
           </div>
-          <!-- ============================================================= -->
         </div>
       </div>
 
@@ -53,7 +44,6 @@
       <button type="submit" class="msger-send-btn">Send</button>
     </form>
   </section>
-  <!-- partial -->
   <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
   <script>
 
@@ -61,13 +51,10 @@
     const msgerInput = get(".msger-input");
     const msgerChat = get(".msger-chat");
 
-    //  ================= TODO : 챗봇 & 유저의 프로필 사진과 이름 변경하기 =================== 
-    // Icons made by Freepik from www.flaticon.com
     const BOT_IMG = "https://t1.daumcdn.net/cfile/tistory/99857F4F5E738F472F";
     const PERSON_IMG = "https://i.imgur.com/Rwp4ZIt.png";
-    const BOT_NAME = "스벅씨";
+    const BOT_NAME = "스타벅스 파트너";
     const PERSON_NAME = "Me";
-    // ===============================================================================
 
     msgerForm.addEventListener("submit", event => {
       event.preventDefault();
