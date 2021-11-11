@@ -16,7 +16,7 @@
 #### 팀원
 ##### [이슬](https://www.naver.com)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=seuly1203&theme=monokai)
-##### [박민아](https://www.naver.com)
+##### [박민아](https://github.com/parkmina365)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=parkmina365&theme=monokai)
 ##### [정하림](https://www.naver.com)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hharimjung&theme=monokai)
