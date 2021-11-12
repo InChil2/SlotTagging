@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # main.py
 # 작성일 : 2021.11.07
-# 수정일 : 2021.11.09
+# 수정일 : 2021.11.12
 # InCheol Shin, Mina Park
 # Slot_Tagging_Project(web_demo)
 
