@@ -13,16 +13,20 @@
 
 
 
-#### 팀원
+#### 팀장, 총괄
 ##### [이슬](https://github.com/seuly1203)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=seuly1203&theme=monokai)
+#### 챗봇 알고리즘, BERT 모델링
 ##### [박민아](https://github.com/parkmina365)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=parkmina365&theme=monokai)
-##### [정하림](https://www.naver.com)
+#### 웹코딩, PPT
+##### [정하림](https://github.com/hharimjung)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hharimjung&theme=monokai)
-##### [오수문](https://www.naver.com)
+#### 웹코딩, 크롤링
+##### [오수문](https://github.com/sumunoh)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sumunoh&theme=monokai)
-##### [신인철](https://www.naver.com)
+#### 기술 총괄
+##### [신인철](https://github.com/InChil2)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=InChil2&theme=monokai)
 
 #### 2021.10.18(월) Start
