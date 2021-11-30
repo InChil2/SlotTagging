@@ -30,6 +30,71 @@
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=InChil2&theme=monokai)
 
 #### 2021.10.18(월) Start
+----------------------------------------------------------------------------------------------------------------------------------------------------
+## 별다방 주문 챗봇
+![image](https://user-images.githubusercontent.com/86215518/143837501-67352039-9096-482b-92de-962c4f45fe11.jpg)
+
+
+### 목차
+![image](https://user-images.githubusercontent.com/86215518/143837540-25d92f22-4c62-4823-b215-5d552f44a506.jpg)
+
+
+
+### 01. 서비스 기획 목적
+#### 기존 사이렌오더 서비스가 존재함에도 불구하고 챗봇 서비스를 개발하게 된 이유 = 사이렌오더 앱 설치 및 이용에 대한 불편함, 어려움
+![image](https://user-images.githubusercontent.com/86215518/143963783-573a9b96-a283-4fd1-bd5f-4cbe89b0df6d.jpg)
+
+
+
+
+### 02. 서비스 시나리오
+![image](https://user-images.githubusercontent.com/86215518/143963963-c0a4ab21-d0bd-4377-b0de-9c6be1d91c7c.jpg)
+
+#### 서비스 시나리오(기본)
+![image](https://user-images.githubusercontent.com/86215518/143964329-57fd6d95-5734-4c75-b4a8-ef3d26166bf3.jpg)
+
+#### 서비스 시나리오(예외 발생시)
+![image](https://user-images.githubusercontent.com/86215518/143964415-28852eb3-e3d0-4c14-8598-69764f438fbd.jpg)
+
+
+
+
+### 03. 파인튜닝 방법
+#### 핵심기술사용 : BERT
+![image](https://user-images.githubusercontent.com/86215518/143964504-6ca65eae-3fdb-4f44-b456-541d1218b6fb.jpg)
+
+#### 파인튜닝방법 : 슬롯태깅
+![image](https://user-images.githubusercontent.com/86215518/143964574-87b4def6-6981-42c3-80be-5665d5244ea5.jpg)
+
+
+
+### 04. 데이터 수집 방안
+![image](https://user-images.githubusercontent.com/86215518/143964886-bdb217db-0460-4bb2-9090-a281e14bbea5.jpg)
+
+
+
+### 05. 서비스 제작 계획
+#### 제작 순서
+![image](https://user-images.githubusercontent.com/86215518/143964983-446a9da5-1162-4fe7-9a66-016a05ab905e.jpg)
+
+#### 서비스 제작 계획 : 챗봇 구현(대시보드)
+![image](https://user-images.githubusercontent.com/86215518/143965023-e2920c86-c6ed-4f81-9c42-1de3ce4f36e7.jpg)
+
+#### 서비스 제작 계획 : 챗봇 시연(이미지)
+![image](https://user-images.githubusercontent.com/86215518/143965045-afac7883-0313-4d32-8b51-7ad082c075f5.jpg)
+
+
+
+
+### 06. 서비스 기대효과
+1) 소비자 맞춤 서비스 제공
+2) 신규 고객 유입 : 스타벅스 어플을 설치 및 가입하지않아도 쉽게 이용 가능하므로 신규 고객의 유입 가능성을 기대해볼 수 있음.
+3) 접근성 향상 : 별도의 앱 설치가 필요없으므로 접근성이 용이함.
+
+
+![image](https://user-images.githubusercontent.com/86215518/143965240-2b3a95c3-22c0-45e9-b72e-610a41c5b7ba.jpg)
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
