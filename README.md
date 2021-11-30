@@ -51,7 +51,7 @@
 ![image](https://user-images.githubusercontent.com/86215518/143963963-c0a4ab21-d0bd-4377-b0de-9c6be1d91c7c.jpg)
 
 #### 서비스 시나리오(기본)
-![image](https://user-images.githubusercontent.com/86215518/143964329-57fd6d95-5734-4c75-b4a8-ef3d26166bf3.jpg)
+![image](https://user-images.githubusercontent.com/86215518/143965388-fcab1642-b576-418c-98ce-10f45d21f671.jpg)
 
 #### 서비스 시나리오(예외 발생시)
 ![image](https://user-images.githubusercontent.com/86215518/143964415-28852eb3-e3d0-4c14-8598-69764f438fbd.jpg)
