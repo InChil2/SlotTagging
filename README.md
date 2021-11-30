@@ -48,12 +48,15 @@
 
 
 ### 02. 서비스 시나리오
+: 핵심어 추출로 사용자가 원하는 주문을 챗봇이 정확하게 파악할 수 있도록 함.
+: ex) 아메리카노, 라떼, .. = 음료 / 쿠키, 케이크, .. = 음식 / 따뜻하게, 차갑게, .. = 온도 / ..
 ![image](https://user-images.githubusercontent.com/86215518/143963963-c0a4ab21-d0bd-4377-b0de-9c6be1d91c7c.jpg)
 
 #### 서비스 시나리오(기본)
 ![image](https://user-images.githubusercontent.com/86215518/143965388-fcab1642-b576-418c-98ce-10f45d21f671.jpg)
 
 #### 서비스 시나리오(예외 발생시)
+: 빈 슬롯 발생, 예외 발생 시 필요한 시나리오 구상(챗봇이 인식할 수 없는 주문이 들어올 경우, 어떻게 처리할 것인가에 대한 방안 마련)
 ![image](https://user-images.githubusercontent.com/86215518/143964415-28852eb3-e3d0-4c14-8598-69764f438fbd.jpg)
 
 
@@ -61,6 +64,7 @@
 
 ### 03. 파인튜닝 방법
 #### 핵심기술사용 : BERT
+: pre-training 된 BERT 에게 fine-tuning 을 추가로 시켜 해당 프로젝트의 목적에 맞는 모델 생성
 ![image](https://user-images.githubusercontent.com/86215518/143964504-6ca65eae-3fdb-4f44-b456-541d1218b6fb.jpg)
 
 #### 파인튜닝방법 : 슬롯태깅
@@ -75,6 +79,7 @@
 
 ### 05. 서비스 제작 계획
 #### 제작 순서
+: flask, figma, HTML, CSS 를 사용하여 웹서비스로 챗봇 시스템 구현
 ![image](https://user-images.githubusercontent.com/86215518/143964983-446a9da5-1162-4fe7-9a66-016a05ab905e.jpg)
 
 #### 서비스 제작 계획 : 챗봇 구현(대시보드)
@@ -93,8 +98,6 @@
 
 
 ![image](https://user-images.githubusercontent.com/86215518/143965240-2b3a95c3-22c0-45e9-b72e-610a41c5b7ba.jpg)
-
-
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
