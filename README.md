@@ -48,7 +48,7 @@
 
 
 ### 02. 서비스 시나리오
-: 핵심어 추출로 사용자가 원하는 주문을 챗봇이 정확하게 파악할 수 있도록 함.
+: 핵심어 추출로 사용자가 원하는 주문을 챗봇이 정확하게 파악할 수 있도록 함. \n
 : ex) 아메리카노, 라떼, .. = 음료 / 쿠키, 케이크, .. = 음식 / 따뜻하게, 차갑게, .. = 온도 / ..
 ![image](https://user-images.githubusercontent.com/86215518/143963963-c0a4ab21-d0bd-4377-b0de-9c6be1d91c7c.jpg)
 
@@ -79,10 +79,10 @@
 
 ### 05. 서비스 제작 계획
 #### 제작 순서
-: flask, figma, HTML, CSS 를 사용하여 웹서비스로 챗봇 시스템 구현
 ![image](https://user-images.githubusercontent.com/86215518/143964983-446a9da5-1162-4fe7-9a66-016a05ab905e.jpg)
 
 #### 서비스 제작 계획 : 챗봇 구현(대시보드)
+: flask, figma, HTML, CSS 를 사용하여 웹서비스로 챗봇 시스템 구현
 ![image](https://user-images.githubusercontent.com/86215518/143965023-e2920c86-c6ed-4f81-9c42-1de3ce4f36e7.jpg)
 
 #### 서비스 제작 계획 : 챗봇 시연(이미지)
